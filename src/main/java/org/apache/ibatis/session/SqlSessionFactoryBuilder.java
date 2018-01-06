@@ -30,6 +30,7 @@ import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
  *
  * @author Clinton Begin
  */
+/** SqlSession工厂对象的建造者 */
 public class SqlSessionFactoryBuilder {
 
   public SqlSessionFactory build(Reader reader) {
@@ -87,7 +88,8 @@ public class SqlSessionFactoryBuilder {
       }
     }
   }
-    
+
+  /** 默认实现建造的对象是DefaultSqlSessionFactory */
   public SqlSessionFactory build(Configuration config) {
     return new DefaultSqlSessionFactory(config);
   }

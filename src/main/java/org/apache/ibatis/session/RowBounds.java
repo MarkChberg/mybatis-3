@@ -18,6 +18,7 @@ package org.apache.ibatis.session;
 /**
  * @author Clinton Begin
  */
+/** 行界限信息类 如果是默认情况，是从0到最大整型 */
 public class RowBounds {
 
   public static final int NO_ROW_OFFSET = 0;

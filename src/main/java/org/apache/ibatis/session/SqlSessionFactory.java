@@ -22,6 +22,8 @@ import java.sql.Connection;
  * 
  * @author Clinton Begin
  */
+
+/** SqlSession的工厂类，对外接口，可以获取到SqlSession */
 public interface SqlSessionFactory {
 
   SqlSession openSession();

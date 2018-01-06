@@ -94,7 +94,7 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
 /**
  * @author Clinton Begin
  */
-/** mybatis的环境容器，对应mybatis-config.xml下的Configuration*/
+/** mybatis的环境容器，对应mybatis-config.xml下的Configuration */
 public class Configuration {
 
   protected Environment environment;

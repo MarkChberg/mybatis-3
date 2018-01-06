@@ -18,6 +18,8 @@ package org.apache.ibatis.session;
 /**
  * @author Clinton Begin
  */
+
+/** 结果上下文的接口，有获取结果实体类的方法、结果数量的方法、是否停止的方法、停止方法 */
 public interface ResultContext<T> {
 
   T getResultObject();

@@ -29,6 +29,7 @@ import org.apache.ibatis.executor.BatchResult;
  *
  * @author Clinton Begin
  */
+/** Mybatis的核心类，提供了数据库操作、映射，管理事务的方法 */
 public interface SqlSession extends Closeable {
 
   /**

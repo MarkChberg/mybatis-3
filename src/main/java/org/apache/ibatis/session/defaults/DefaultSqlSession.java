@@ -46,6 +46,7 @@ import org.apache.ibatis.session.SqlSession;
  *
  * @author Clinton Begin
  */
+/** 线程非安全的SqlSession实现类 */
 public class DefaultSqlSession implements SqlSession {
 
   private final Configuration configuration;

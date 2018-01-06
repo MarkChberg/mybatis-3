@@ -25,6 +25,7 @@ import org.apache.ibatis.mapping.MappedStatement;
  * @since 3.4.0
  * @author Kazuki Shimizu
  */
+/** 对未知行自动映射行为的枚举 */
 public enum AutoMappingUnknownColumnBehavior {
 
   /**

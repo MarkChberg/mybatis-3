@@ -18,6 +18,8 @@ package org.apache.ibatis.session;
 /**
  * @author Clinton Begin
  */
+
+/** 处理映射结果的方法 */
 public interface ResultHandler<T> {
 
   void handleResult(ResultContext<? extends T> resultContext);
