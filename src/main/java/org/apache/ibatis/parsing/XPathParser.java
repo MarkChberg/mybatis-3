@@ -42,13 +42,15 @@ import org.xml.sax.SAXParseException;
 /**
  * @author Clinton Begin
  */
+
+/** 使用xpath的解析器，主要方法分为两类：构造、evalXxxxx() */
 public class XPathParser {
 
   private final Document document;
   private boolean validation;
   private EntityResolver entityResolver;
   private Properties variables;
-  private XPath xpath;
+  private XPath xpath;  // xpath形式
 
   public XPathParser(String xml) {
     commonConstructor(false, null, null);

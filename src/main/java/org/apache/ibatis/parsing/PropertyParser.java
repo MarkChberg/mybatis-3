@@ -71,6 +71,7 @@ public class PropertyParser {
       return (variables == null) ? defaultValue : variables.getProperty(key, defaultValue);
     }
 
+    /** 如果传入的content不存在可以找到的key或者defaultValue，会返回“{content}” */
     @Override
     public String handleToken(String content) {
       if (variables != null) {

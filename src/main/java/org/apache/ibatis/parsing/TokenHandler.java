@@ -18,6 +18,8 @@ package org.apache.ibatis.parsing;
 /**
  * @author Clinton Begin
  */
+
+/** 处理特殊的token的接口，比如#{} ${} */
 public interface TokenHandler {
   String handleToken(String content);
 }

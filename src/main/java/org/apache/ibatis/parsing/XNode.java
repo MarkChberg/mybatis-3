@@ -31,7 +31,7 @@ import org.w3c.dom.NodeList;
  */
 public class XNode {
 
-  private final Node node;
+  private final Node node; // Java JDK的Node对象，表示DOM中的一个节点
   private final String name;
   private final String body;
   private final Properties attributes;
