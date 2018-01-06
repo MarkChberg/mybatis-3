@@ -26,6 +26,8 @@ import java.util.List;
  * @author Adam Gent
  * @author Kazuki Shimizu
  */
+
+/** 对sql的抽象实现， 只有一个抽象方法： getSelf，交给子类去完成*/
 public abstract class AbstractSQL<T> {
 
   private static final String AND = ") \nAND (";
@@ -278,8 +280,9 @@ public abstract class AbstractSQL<T> {
     return sb.toString();
   }
 
+  /** 字符序列连接类 */
   private static class SafeAppendable {
-    private final Appendable a;
+    private final Appendable a; // 为什么使用聚合？
     private boolean empty = true;
 
     public SafeAppendable(Appendable a) {
@@ -305,10 +308,11 @@ public abstract class AbstractSQL<T> {
 
   }
 
+  /** 静态内部类，sql的statement */
   private static class SQLStatement {
 
     public enum StatementType {
-      DELETE, INSERT, SELECT, UPDATE
+      DELETE, INSERT, SELECT, UPDATE //四种查询
     }
 
     StatementType statementType;

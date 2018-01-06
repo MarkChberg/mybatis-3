@@ -27,6 +27,7 @@ public enum JdbcType {
    * This is added to enable basic support for the
    * ARRAY data type - but a custom type handler is still required
    */
+  /** 对Types的包装，Types是JDK提供的常量类，提供了一系列的常量，此类将Types变成了枚举 */
   ARRAY(Types.ARRAY),
   BIT(Types.BIT),
   TINYINT(Types.TINYINT),

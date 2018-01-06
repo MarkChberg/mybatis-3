@@ -41,6 +41,8 @@ import org.apache.ibatis.type.TypeHandler;
  * @author Clinton Begin
  * @author Adam Gent
  */
+
+/** 一个枚举，构造方法前一个是TypeHandler，后一个是JdbcType */
 public enum Null {
   BOOLEAN(new BooleanTypeHandler(), JdbcType.BOOLEAN),
 

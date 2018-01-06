@@ -35,6 +35,8 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
 /**
  * @author Clinton Begin
  */
+
+/** 执行sql的类 重要的类，封装了statement和*/
 public class SqlRunner {
 
   public static final int NO_GENERATED_KEY = Integer.MIN_VALUE + 1001;
@@ -178,6 +180,7 @@ public class SqlRunner {
    * @param sql The SQL
    * @throws SQLException If statement preparation or execution fails
    */
+  /** 执行原生sql语句 */
   public void run(String sql) throws SQLException {
     Statement stmt = connection.createStatement();
     try {
@@ -199,6 +202,7 @@ public class SqlRunner {
     }
   }
 
+  // 设定预处理语句的参数
   private void setParameters(PreparedStatement ps, Object... args) throws SQLException {
     for (int i = 0, n = args.length; i < n; i++) {
       if (args[i] == null) {

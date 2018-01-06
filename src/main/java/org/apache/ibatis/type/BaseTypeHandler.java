@@ -27,6 +27,8 @@ import org.apache.ibatis.session.Configuration;
  * @author Clinton Begin
  * @author Simone Tripodi
  */
+
+/** 模板设计方法：将setParameter的方法交给子类去实现 */
 public abstract class BaseTypeHandler<T> extends TypeReference<T> implements TypeHandler<T> {
 
   protected Configuration configuration;

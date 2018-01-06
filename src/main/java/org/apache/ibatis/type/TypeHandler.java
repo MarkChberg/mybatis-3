@@ -23,6 +23,8 @@ import java.sql.SQLException;
 /**
  * @author Clinton Begin
  */
+
+/** 将查询到的数据库的结果转换到JavaType及判断预处理所使用到的类 */
 public interface TypeHandler<T> {
 
   void setParameter(PreparedStatement ps, int i, T parameter, JdbcType jdbcType) throws SQLException;

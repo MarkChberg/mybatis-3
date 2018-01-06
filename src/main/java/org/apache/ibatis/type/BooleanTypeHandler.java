@@ -23,6 +23,7 @@ import java.sql.SQLException;
 /**
  * @author Clinton Begin
  */
+/** 实现了数据库与java类型的设置与转化 */
 public class BooleanTypeHandler extends BaseTypeHandler<Boolean> {
 
   @Override

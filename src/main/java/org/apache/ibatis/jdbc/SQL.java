@@ -18,6 +18,8 @@ package org.apache.ibatis.jdbc;
 /**
  * @author Clinton Begin
  */
+
+/** 对抽象sql的实现，返回这个对象 */
 public class SQL extends AbstractSQL<SQL> {
 
   @Override
