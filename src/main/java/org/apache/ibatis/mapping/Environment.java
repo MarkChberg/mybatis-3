@@ -22,10 +22,11 @@ import org.apache.ibatis.transaction.TransactionFactory;
 /**
  * @author Clinton Begin
  */
+/** 对应配置文件中的environment */
 public final class Environment {
-  private final String id;
-  private final TransactionFactory transactionFactory;
-  private final DataSource dataSource;
+  private final String id; // id
+  private final TransactionFactory transactionFactory; // 事务管理器
+  private final DataSource dataSource; // 数据源 有pooled，unpooled，jndi三种
 
   public Environment(String id, TransactionFactory transactionFactory, DataSource dataSource) {
     if (id == null) {
@@ -42,6 +43,7 @@ public final class Environment {
     this.dataSource = dataSource;
   }
 
+  /** 建造者模式 */
   public static class Builder {
       private String id;
       private TransactionFactory transactionFactory;

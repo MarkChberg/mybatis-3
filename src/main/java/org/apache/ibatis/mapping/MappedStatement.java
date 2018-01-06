@@ -31,6 +31,7 @@ import org.apache.ibatis.session.Configuration;
 /**
  * @author Clinton Begin
  */
+/** 表示xml中一个查询语句的查询节点 */
 public final class MappedStatement {
 
   private String resource;

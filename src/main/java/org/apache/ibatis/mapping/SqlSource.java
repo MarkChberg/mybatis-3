@@ -21,6 +21,8 @@ package org.apache.ibatis.mapping;
  *
  * @author Clinton Begin
  */
+
+/** mapped statement 的接口表示 接受到user的参数后，会得到sql语句，这个sql语句会传递到数据库执行 */
 public interface SqlSource {
 
   BoundSql getBoundSql(Object parameterObject);

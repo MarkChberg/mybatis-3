@@ -18,6 +18,8 @@ package org.apache.ibatis.mapping;
 /**
  * @author Clinton Begin
  */
+
+/** 枚举类，表示statement的三种类型，普通的statement，带参数的statement，callableStatement（处理存储过程的statement）*/
 public enum StatementType {
   STATEMENT, PREPARED, CALLABLE
 }

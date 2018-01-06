@@ -42,9 +42,11 @@ public class ParameterMapping {
   private ParameterMapping() {
   }
 
+  // 在内部静态类Builder中去定义外部类对象，建造者模式
   public static class Builder {
     private ParameterMapping parameterMapping = new ParameterMapping();
 
+    /** 默认的参数类型都是in */
     public Builder(Configuration configuration, String property, TypeHandler<?> typeHandler) {
       parameterMapping.configuration = configuration;
       parameterMapping.property = property;
@@ -106,8 +108,8 @@ public class ParameterMapping {
     }
 
     private void validate() {
-      if (ResultSet.class.equals(parameterMapping.javaType)) {
-        if (parameterMapping.resultMapId == null) { 
+      if (ResultSet.class.equals(parameterMapping.javaType)) { // ResultSet是象征性地表示查询到的对象
+        if (parameterMapping.resultMapId == null) {  // 针对配置了resultMap的情况
           throw new IllegalStateException("Missing resultmap in property '"  
               + parameterMapping.property + "'.  " 
               + "Parameters of type java.sql.ResultSet require a resultmap.");

@@ -33,6 +33,8 @@ import org.apache.ibatis.session.Configuration;
  *
  * @author Clinton Begin
  */
+
+/** 由实现SqlSource接口的类返回，表示一个sql的实际执行，动态之后实际生成的sql */
 public class BoundSql {
 
   private final String sql;

@@ -23,15 +23,18 @@ import org.apache.ibatis.session.Configuration;
 /**
  * @author Clinton Begin
  */
+
+/** 参数的map映射类 */
 public class ParameterMap {
 
   private String id;
   private Class<?> type;
-  private List<ParameterMapping> parameterMappings;
+  private List<ParameterMapping> parameterMappings; // 各个参数映射的集合
 
   private ParameterMap() {
   }
 
+  /** 建造者模式 */
   public static class Builder {
     private ParameterMap parameterMap = new ParameterMap();
 

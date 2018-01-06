@@ -18,6 +18,7 @@ package org.apache.ibatis.mapping;
 /**
  * @author Eduardo Macarron
  */
+/** 枚举类，施行sql的三种形式，lazy，eager，default */
 public enum FetchType {
   LAZY, EAGER, DEFAULT
 }

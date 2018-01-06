@@ -37,6 +37,7 @@ import org.apache.ibatis.logging.LogFactory;
  * 
  * @author Eduardo Macarron
  */
+/** 数据库厂商名 */
 public class VendorDatabaseIdProvider implements DatabaseIdProvider {
   
   private static final Log log = LogFactory.getLog(VendorDatabaseIdProvider.class);

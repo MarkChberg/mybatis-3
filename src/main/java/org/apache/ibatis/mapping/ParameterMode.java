@@ -18,6 +18,7 @@ package org.apache.ibatis.mapping;
 /**
  * @author Clinton Begin
  */
+/** 枚举类，定义了参数的三个类型，in，out，inout */
 public enum ParameterMode {
   IN, OUT, INOUT
 }

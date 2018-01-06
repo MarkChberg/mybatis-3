@@ -28,6 +28,8 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
 /**
  * @author Clinton Begin
  */
+
+/** 结果参数的一个映射 */
 public class ResultMapping {
 
   private Configuration configuration;
@@ -49,6 +51,7 @@ public class ResultMapping {
   ResultMapping() {
   }
 
+  /** 建造者模式：返回结果的一个映射 */
   public static class Builder {
     private ResultMapping resultMapping = new ResultMapping();
 

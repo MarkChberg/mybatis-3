@@ -36,6 +36,7 @@ import org.apache.ibatis.session.Configuration;
 /**
  * @author Clinton Begin
  */
+/** ResultMap ：返回对象的映射集合，封装了列column到property的信息 */
 public class ResultMap {
   private Configuration configuration;
 

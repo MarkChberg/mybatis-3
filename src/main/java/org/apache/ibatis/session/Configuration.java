@@ -94,18 +94,19 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
 /**
  * @author Clinton Begin
  */
+/** mybatis的环境容器，对应mybatis-config.xml下的Configuration*/
 public class Configuration {
 
   protected Environment environment;
 
   protected boolean safeRowBoundsEnabled;
   protected boolean safeResultHandlerEnabled = true;
-  protected boolean mapUnderscoreToCamelCase;
-  protected boolean aggressiveLazyLoading;
+  protected boolean mapUnderscoreToCamelCase; // 自动映射
+  protected boolean aggressiveLazyLoading; // 延迟加载
   protected boolean multipleResultSetsEnabled = true;
-  protected boolean useGeneratedKeys;
+  protected boolean useGeneratedKeys; //是否允许jdbc生成主键
   protected boolean useColumnLabel = true;
-  protected boolean cacheEnabled = true;
+  protected boolean cacheEnabled = true; // 启用或禁用缓存
   protected boolean callSettersOnNulls;
   protected boolean useActualParamName = true;
   protected boolean returnInstanceForEmptyRow;

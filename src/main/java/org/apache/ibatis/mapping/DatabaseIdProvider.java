@@ -27,6 +27,8 @@ import javax.sql.DataSource;
  * 
  * @author Eduardo Macarron
  */
+
+/** 返回数据库id接口，框架会根据id表示的数据库生成不同的sql语句 */
 public interface DatabaseIdProvider {
 
   void setProperties(Properties p);
