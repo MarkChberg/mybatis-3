@@ -27,6 +27,8 @@ import org.apache.ibatis.session.TransactionIsolationLevel;
  *
  * @author Clinton Begin
  */
+
+/** 获取事务（包装后的连接）的工厂方法接口 */
 public interface TransactionFactory {
 
   /**

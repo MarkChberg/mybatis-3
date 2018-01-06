@@ -31,6 +31,8 @@ import org.apache.ibatis.transaction.TransactionFactory;
  *
  * @see JdbcTransaction
  */
+
+/** 事务工厂类的一个jdbc实现 */
 public class JdbcTransactionFactory implements TransactionFactory {
 
   @Override

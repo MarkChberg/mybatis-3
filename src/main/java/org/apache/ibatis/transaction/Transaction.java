@@ -24,6 +24,8 @@ import java.sql.SQLException;
  *
  * @author Clinton Begin
  */
+
+/** 事务的接口，会将connection包装，并维护connnection的生命周期 */
 public interface Transaction {
 
   /**
