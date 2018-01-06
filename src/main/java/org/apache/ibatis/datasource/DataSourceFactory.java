@@ -21,10 +21,18 @@ import javax.sql.DataSource;
 /**
  * @author Clinton Begin
  */
+
+/**----------------定义了一个数据源工厂接口---------------------*/
+
+/**
+ *  1. setProperties 数据源配置
+ *  2. getDataSource 获取数据源
+ */
 public interface DataSourceFactory {
+
 
   void setProperties(Properties props);
 
-  DataSource getDataSource();
+  DataSource getDataSource(); /** 数据源是java1.4开始的接口，有获取连接方法，实现时必须带有无参构造器 */
 
 }

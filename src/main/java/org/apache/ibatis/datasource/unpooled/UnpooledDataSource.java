@@ -35,6 +35,8 @@ import org.apache.ibatis.io.Resources;
  * @author Clinton Begin
  * @author Eduardo Macarron
  */
+
+/** DataSource接口的主要实现 */
 public class UnpooledDataSource implements DataSource {
   
   private ClassLoader driverClassLoader;
@@ -53,7 +55,7 @@ public class UnpooledDataSource implements DataSource {
     Enumeration<Driver> drivers = DriverManager.getDrivers();
     while (drivers.hasMoreElements()) {
       Driver driver = drivers.nextElement();
-      registeredDrivers.put(driver.getClass().getName(), driver);
+      registeredDrivers.put(driver.getClass().getName(), driver); // 将驱动注册到concurrentHashMap中
     }
   }
 
@@ -203,6 +205,7 @@ public class UnpooledDataSource implements DataSource {
     return connection;
   }
 
+  //对Driver的操作均使用了同步关键字，为什么？
   private synchronized void initializeDriver() throws SQLException {
     if (!registeredDrivers.containsKey(driver)) {
       Class<?> driverType;

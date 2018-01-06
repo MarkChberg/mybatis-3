@@ -36,7 +36,7 @@ public class JndiDataSourceFactory implements DataSourceFactory {
   public static final String ENV_PREFIX = "env.";
 
   private DataSource dataSource;
-
+  /** JNDI形式的具体实现 */
   @Override
   public void setProperties(Properties properties) {
     try {
@@ -66,10 +66,11 @@ public class JndiDataSourceFactory implements DataSourceFactory {
     return dataSource;
   }
 
+  /** 将传入的Properties文件的配置转化为符合context环境的形式 */
   private static Properties getEnvProperties(Properties allProps) {
     final String PREFIX = ENV_PREFIX;
     Properties contextProperties = null;
-    for (Entry<Object, Object> entry : allProps.entrySet()) {
+    for (Entry<Object, Object> entry : allProps.entrySet()) { // Properties继承自HashTable，entrySet来源自HashTable
       String key = (String) entry.getKey();
       String value = (String) entry.getValue();
       if (key.startsWith(PREFIX)) {

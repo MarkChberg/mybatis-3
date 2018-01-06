@@ -20,6 +20,7 @@ import org.apache.ibatis.datasource.unpooled.UnpooledDataSourceFactory;
 /**
  * @author Clinton Begin
  */
+/** 连接池工厂方法 具体使用了UnpooledDataSourceFactory */
 public class PooledDataSourceFactory extends UnpooledDataSourceFactory {
 
   public PooledDataSourceFactory() {

@@ -21,6 +21,7 @@ import java.util.List;
 /**
  * @author Clinton Begin
  */
+/** 关于池的一些配置 */
 public class PoolState {
 
   protected PooledDataSource dataSource;

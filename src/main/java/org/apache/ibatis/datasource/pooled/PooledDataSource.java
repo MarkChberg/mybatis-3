@@ -37,6 +37,8 @@ import org.apache.ibatis.logging.LogFactory;
  *
  * @author Clinton Begin
  */
+
+/** 一个简单的连接池实现，datasource使用的是unpooledDataSource */
 public class PooledDataSource implements DataSource {
 
   private static final Log log = LogFactory.getLog(PooledDataSource.class);
@@ -172,7 +174,7 @@ public class PooledDataSource implements DataSource {
 
   /*
    * The maximum number of tolerance for bad connection happens in one thread
-    * which are applying for new {@link PooledConnection}
+   * which are applying for new {@link PooledConnection}
    *
    * @param poolMaximumLocalBadConnectionTolerance
    * max tolerance for bad connection happens in one thread
@@ -300,6 +302,7 @@ public class PooledDataSource implements DataSource {
    * Closes all active and idle connections in the pool
    */
   public void forceCloseAll() {
+    /** 将池中的连接全部关闭的方法，循环两次容错，保证关闭 */
     synchronized (state) {
       expectedConnectionTypeCode = assembleConnectionTypeCode(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
       for (int i = state.activeConnections.size(); i > 0; i--) {
@@ -560,6 +563,7 @@ public class PooledDataSource implements DataSource {
    */
   public static Connection unwrapConnection(Connection conn) {
     if (Proxy.isProxyClass(conn.getClass())) {
+      /** 连接使用了jdk的动态代理模式 */
       InvocationHandler handler = Proxy.getInvocationHandler(conn);
       if (handler instanceof PooledConnection) {
         return ((PooledConnection) handler).getRealConnection();

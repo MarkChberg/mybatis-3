@@ -26,6 +26,8 @@ import org.apache.ibatis.reflection.ExceptionUtil;
 /**
  * @author Clinton Begin
  */
+
+/** 采取了动态代理的方法，对外使用的是Connection的代理对象 */
 class PooledConnection implements InvocationHandler {
 
   private static final String CLOSE = "close";
