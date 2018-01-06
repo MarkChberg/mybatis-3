@@ -41,6 +41,8 @@ import org.apache.ibatis.reflection.Jdk;
  * @author Clinton Begin
  * @author Kazuki Shimizu
  */
+
+/** TypeHandler注册中心，保存TypeHandler对象 */
 public final class TypeHandlerRegistry {
 
   private final Map<JdbcType, TypeHandler<?>> JDBC_TYPE_HANDLER_MAP = new EnumMap<JdbcType, TypeHandler<?>>(JdbcType.class);
